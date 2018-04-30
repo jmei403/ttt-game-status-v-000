@@ -32,11 +32,11 @@ def won?(board)
 end
 
 def full?(board)
-  (0..board.length - 1).all? { |index| position_taken?(board, index.to_i) }
+  board.all? { |token| token == "X" || token == "O" }
 end
 
 def draw?(board)
-  won?(board) == false && full?(board)
+  !won?(board) && full?(board)
 end
 
 def over?(board)
