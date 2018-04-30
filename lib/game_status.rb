@@ -94,3 +94,7 @@ def winner(board)
     board[winning_combo.first]
   end
 end
+
+board = [" ", " ", " ", "O", "O", " ", "X", "X", "X"]
+
+p won?(board)
